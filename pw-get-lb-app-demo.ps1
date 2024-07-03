@@ -6,7 +6,7 @@ $p12CertPassword = "password#"
 $p12Cert = Get-PfxCertificate -FilePath $p12CertPath -Password (ConvertTo-SecureString -String $p12CertPassword -AsPlainText -Force)
 
 # Define the API endpoint
-$apiUrl = "https://YOUR-TENANT.console.ves.volterra.io/api/config/namespaces/NAMESPACE/u-vonblucher/http_loadbalancers/app-demo?response_format=2"
+$apiUrl = "https://YOUR-TENANT.console.ves.volterra.io/api/config/namespaces/NAMESPACE/http_loadbalancers/YOUR-LB-NAME"
 
 # Create a WebRequest object
 $handler = New-Object System.Net.Http.HttpClientHandler

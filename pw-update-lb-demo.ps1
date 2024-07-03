@@ -5,7 +5,7 @@ $p12CertPassword = "password#"
 $p12Cert = Get-PfxCertificate -FilePath $p12CertPath -Password (ConvertTo-SecureString -String $p12CertPassword -AsPlainText -Force)
 
 # Define the API endpoint
-$apiUrl = "https://YOUR-TENANT.console.ves.volterra.io/api/config/namespaces/NAMESPACE/u-vonblucher/http_loadbalancers/auto-demo"
+$apiUrl = "https://YOUR-TENANT.console.ves.volterra.io/api/config/namespaces/NAMESPACE/http_loadbalancers/YOUR-LB-NAME"
 $jsonPayloadFilePath = "pw-update-lb-demo.yaml"
 
 # Read the YAML payload from the file

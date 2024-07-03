@@ -1,9 +1,9 @@
 {
   "metadata": {
     "name": "auto-demo",
-    "namespace": "u-vonblucher",
+    "namespace": "YOUR-NAMESPACE",
     "labels": {
-      "ves.io/app_type": "ves-io-u-vonblucher-auto-demo"
+      "ves.io/app_type": "ves-io-YOUR-NAMESPACE-auto-demo"
     },
     "annotations": {},
     "description": "",
@@ -36,8 +36,8 @@
     "default_route_pools": [
       {
         "pool": {
-          "tenant": "f5-sa-rnxeudss",
-          "namespace": "u-vonblucher",
+          "tenant": "YOUR-TENANT",
+          "namespace": "YOUR-NAMESPACE",
           "name": "secureapp-pool"
         },
         "weight": 1,
@@ -49,9 +49,9 @@
     "routes": [],
     "cors_policy": null,
     "app_firewall": {
-      "tenant": "f5-sa-rnxeudss",
-      "namespace": "u-vonblucher",
-      "name": "ublucher-custom-waf"
+      "tenant": "YOUR-TENANT",
+      "namespace": "YOUR-NAMESPACE",
+      "name": "YOUR-custom-waf"
     },
     "add_location": false,
     "no_challenge": {},
