@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "name": "auto-demo",
+    "namespace": "u-vonblucher",
+    "labels": {
+      "ves.io/app_type": "ves-io-u-vonblucher-auto-demo"
+    },
+    "annotations": {},
+    "description": "",
+    "disable": false
+  },
+  "spec": {
+    "domains": [
+      "auto.sa.f5demos.com"
+    ],
+    "https_auto_cert": {
+      "http_redirect": true,
+      "add_hsts": false,
+      "tls_config": {
+        "medium_security": {}
+      },
+      "no_mtls": {},
+      "default_header": {},
+      "enable_path_normalize": {},
+      "port": 443,
+      "non_default_loadbalancer": {},
+      "header_transformation_type": {
+        "default_header_transformation": {}
+      },
+      "connection_idle_timeout": 120000,
+      "http_protocol_options": {
+        "http_protocol_enable_v1_v2": {}
+      }
+    },
+    "advertise_on_public_default_vip": {},
+    "default_route_pools": [
+      {
+        "pool": {
+          "tenant": "f5-sa-rnxeudss",
+          "namespace": "u-vonblucher",
+          "name": "secureapp-pool"
+        },
+        "weight": 1,
+        "priority": 1,
+        "endpoint_subsets": {}
+      }
+    ],
+    "origin_server_subset_rule_list": null,
+    "routes": [],
+    "cors_policy": null,
+    "app_firewall": {
+      "tenant": "f5-sa-rnxeudss",
+      "namespace": "u-vonblucher",
+      "name": "ublucher-custom-waf"
+    },
+    "add_location": false,
+    "no_challenge": {},
+    "more_option": null,
+    "user_id_client_ip": {},
+    "api_rate_limit_legacy": null,
+    "disable_rate_limit": {},
+    "malicious_user_mitigation": null,
+    "waf_exclusion_rules": [],
+    "data_guard_rules": [],
+    "blocked_clients": [],
+    "trusted_clients": [],
+    "api_protection_rules": null,
+    "ddos_mitigation_rules": [],
+    "service_policies_from_namespace": {},
+    "round_robin": {},
+    "disable_trust_client_ip_headers": {},
+    "enable_malicious_user_detection": {},
+    "enable_api_discovery": {
+      "disable_learn_from_redirect_traffic": {},
+      "sensitive_data_detection_rules": null,
+      "discovered_api_settings": {
+        "purge_duration_for_inactive_discovered_apis": 7
+      }
+    },
+    "disable_api_definition": {},
+    "enable_ip_reputation": {
+      "ip_threat_categories": [
+        "SPAM_SOURCES",
+        "WINDOWS_EXPLOITS",
+        "WEB_ATTACKS",
+        "BOTNETS",
+        "REPUTATION",
+        "SCANNERS",
+        "PHISHING",
+        "PROXY",
+        "MOBILE_THREATS",
+        "TOR_PROXY",
+        "DENIAL_OF_SERVICE",
+        "NETWORK"
+      ]
+    },
+    "client_side_defense": {
+      "policy": {
+        "js_insert_all_pages": {}
+      }
+    },
+    "csrf_policy": null,
+    "graphql_rules": [],
+    "protected_cookies": [],
+    "system_default_timeouts": {},
+    "jwt_validation": null,
+    "disable_threat_mesh": {},
+    "l7_ddos_action_default": {}
+  }
+}
